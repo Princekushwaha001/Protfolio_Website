@@ -7,53 +7,98 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <video autoplay muted loop id="bg-video">
+        <source src="assets/videos/3163534-uhd_3840_2160_30fps.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    
     <header>
         <div class="container">
-            <h1>Prince Kushwaha</h1>
-            <p>Bangalore, India | +91 9008731463 | <a href="mailto:prince001kushwaha@gmail.com">prince001kushwaha@gmail.com</a> | <a href="https://linkedin.com/in/prince001kushwaha" target="_blank">LinkedIn</a></p>
+            <div class="profile-photo">
+                <img src="D:\Photo\Photo.jpg" alt="Your Photo" />
+            </div>
+            <div class="header-content">
+                <h1>Prince Kushwaha</h1>
+                <p>Bangalore, India | +91 9008731463 | 
+                    <a href="mailto:prince001kushwaha@gmail.com">prince001kushwaha@gmail.com</a> | 
+                    <a href="https://linkedin.com/in/prince001kushwaha" target="_blank">LinkedIn</a>
+                </p>
+            </div>
         </div>
     </header>
+
+    <!-- Popup Modal -->
+    <!-- Modern Popup -->
+    
+<div id="welcomePopup" class="popup hidden">
+    <div class="popup-content">
+        <h2>Welcome To My Website</h2>
+        <p>Hope you have a great experience!</p>
+        <button id="closePopupButton">OK</button>
+    </div>
+</div>
+
+
+
+
 
     <section id="education" class="section">
         <div class="container">
             <h2>Education</h2>
             <div class="card">
-                <p><strong>B.E: Computer Science & Engineering</strong> | ACS College Of Engineering, Bangalore | 8 CGPA (08/2021 – Present)</p>
-                <p><strong>PUC: Computer Science</strong> | Krupanidhi PU College, Bangalore | 86% (04/2018 – 03/2020)</p>
-                <p><strong>10th</strong> | JR Convent School, Siwan | 70% (03/2017 – 03/2018)</p>
+                <p><strong>B.E: Computer Science & Engineering</strong> <span style="float: right;"><strong>07 2021 – 07 2025</strong></span></p>
+                <p>ACS College Of Engineering - Bangalore, IN</p>
+                <p>• 8 CGPA</p>
+                
+                <p><strong>PUC: Computer Science</strong> <span style="float: right;"><strong>04 2018 – 03 2020</strong></span></p>
+                <p>Krupanidhi PU College – Bangalore</p>
+                <p>Percentage: 86%</p>
+    
+                <p><strong>10th</strong> <span style="float: right;"><strong>03 2017 – 03 2018</strong></span></p>
+                <p>JR Convent School Sunita Vidya Nagari - Siwan</p>
+                <p>Percentage: 70%</p>
             </div>
         </div>
     </section>
+    
 
     <section id="experience" class="section">
         <div class="container">
-            <h2>Experience</h2>
+            <h2>Internships Experience</h2>
+    
             <div class="card">
-                <h3>Walmart USA Advance Software Engineering Program (12/2023 – 04/2024)</h3>
+                <p><strong>Walmart USA Advance Software Engineering Program</strong> <span style="float: right;"><strong>12 2023 – 04 2024</strong></span></p>
+                <p><em>Forage</em> - <span style="font-style: italic;">Remote</span></p>
                 <ul>
                     <li>Developed a custom heap data structure in Java for logistics optimization.</li>
-                    <li>Designed UML and ER diagrams to improve system efficiency.</li>
-                    <li>Collaborated in Agile teams to enhance project timelines and outcomes.</li>
+                    <li>Designed a UML class diagram for a data processor with multiple operating modes.</li>
+                    <li>Created an ERD for Walmart’s pet department to meet business requirements.</li>
                 </ul>
             </div>
+    
             <div class="card">
-                <h3>Streaming Platform Development: Netflix Clone (06/2023 – 08/2023)</h3>
+                <p><strong>Streaming Platform Development: Netflix Clone</strong> <span style="float: right;"><strong>06 2023 – 08 2023</strong></span></p>
+                <p><em>Bharat Intern</em> - <span style="font-style: italic;">Remote</span></p>
                 <ul>
-                    <li>Built a Netflix-like platform using Java and MySQL.</li>
-                    <li>Implemented TMDb API and user authentication with Spring Security.</li>
-                    <li>Deployed successfully on Heroku.</li>
+                    <li>Built a Netflix-like platform using Python, HTML, CSS, and MySQL.</li>
+                    <li>Implemented TMDb API for dynamic content and user authentication with Spring Security.</li>
+                    <li>Deployed successfully on Heroku for scalability.</li>
                 </ul>
             </div>
+    
             <div class="card">
-                <h3>Online Resume Builder Tool (07/2023 – 10/2023)</h3>
+                <p><strong>Online Resume Builder Tool</strong> <span style="float: right;"><strong>07 2023 – 10 2023</strong></span></p>
+                <p><em>Code Clause</em> - <span style="font-style: italic;">Remote</span></p>
                 <ul>
-                    <li>Created a customizable resume generator using Java.</li>
+                    <li>Created a web app for generating customizable resumes using Java.</li>
                     <li>Integrated iText/JasperReports for PDF generation.</li>
-                    <li>Focused on responsive UI/UX and secure authentication.</li>
+                    <li>Focused on responsive UI/UX and secure user authentication.</li>
                 </ul>
             </div>
+    
             <div class="card">
-                <h3>Airline Reservation System (07/2023 – 10/2023)</h3>
+                <p><strong>Airline Reservation System</strong> <span style="float: right;"><strong>07 2023 – 10 2023</strong></span></p>
+                <p><em>Code Clause</em> - <span style="font-style: italic;">Remote</span></p>
                 <ul>
                     <li>Developed a Java-based booking system with MongoDB backend.</li>
                     <li>Designed admin and user modules for comprehensive functionality.</li>
@@ -61,22 +106,56 @@
             </div>
         </div>
     </section>
-
+    
     <section id="projects" class="section">
         <div class="container">
             <h2>Projects</h2>
             <ul>
-                <li>Stock Analysis and Prediction</li>
-                <li>Stopwatch Using Java</li>
-                <li>Money Tracker Webapp</li>
+                <li>AI-Powered PDF Analysis using RAG and Embeddings</li>
+                <li>Stock Analysis and Prediction <em>(Python, Pandas, TensorFlow, LSTM, Prophet)</em></li>
+                <li>Stopwatch Using Java <em>(Java Swing, Multithreading)</em></li>
+                <li>Money Tracker Web App <em>(Python, Flask, MySQL, API Integration)</em></li>
+                <li>API Automation Testing using Pytest <em>(Python, Requests, Postman, Pytest)</em></li>
             </ul>
         </div>
     </section>
+    
 
     <section id="skills" class="section">
         <div class="container">
             <h2>Skills</h2>
-            <p>Java, Python, JavaScript, MySQL, Oracle, MongoDB, Git, HTML, CSS, APIs</p>
+            
+            <h3>🌐 Programming Languages & Development</h3>
+            <ul>
+                <li>Java (Core & Advanced)</li>
+                <li>Python</li>
+                <li>JavaScript, HTML, CSS (Web Development)</li>
+            </ul>
+    
+            <h3>☁️ Cloud & DevOps</h3>
+            <ul>
+                <li>AWS, Azure (Cloud Computing)</li>
+                <li>CI/CD Pipelines (Jenkins, Docker)</li>
+            </ul>
+    
+            <h3>📊 Databases & Backend</h3>
+            <ul>
+                <li>MySQL, PostgreSQL</li>
+                <li>Spring Boot, Hibernate (Java Backend)</li>
+            </ul>
+    
+            <h3>🤖 AI, ML & Automation</h3>
+            <ul>
+                <li>Machine Learning (Basic Understanding)</li>
+                <li>Selenium, Test Automation</li>
+            </ul>
+    
+            <h3>🔗 Frameworks & Tools</h3>
+            <ul>
+                <li>Spring, Spring Boot</li>
+                <li>React.js, Flask (Web Frameworks)</li>
+                <li>REST APIs, Microservices</li>
+            </ul>
         </div>
     </section>
 
@@ -97,5 +176,8 @@
             <p>&copy; 2025 Prince Kushwaha | All Rights Reserved</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
