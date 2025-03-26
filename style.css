@@ -1,11 +1,20 @@
 /* General Styling */
+/* Ensure content is readable */
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #f5f5f5;
+    color: white;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh; /* Ensures body fills the screen */
+    display: flex;
+    flex-direction: column;
 }
+
+main {
+    flex: 1; /* Pushes footer to the bottom */
+}
+
 
 .container {
     width: 90%;
@@ -13,10 +22,11 @@ body {
     margin: 0 auto;
 }
 
-header {
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 2px solid #333;
+/* Add background blur for better readability */
+header, .section, footer {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    padding: 20px;
+    border-radius: 10px;
 }
 
 h1, h2, h3 {
@@ -28,11 +38,11 @@ h1, h2, h3 {
 }
 
 .card {
-    background-color: #1e1e1e;
+    background-color: none;
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    box-shadow: none;
 }
 
 a {
@@ -50,4 +60,116 @@ footer {
     padding: 20px;
     background-color: #1e1e1e;
     border-top: 2px solid #333;
+}
+
+/* Background Video */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#skills ul {
+    list-style: none; /* Removes default bullets */
+    padding: 10;
+    
+}
+
+#skills li {
+    font-size: 1.0rem;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+
+}
+
+#skills li::before {
+    content: "✅"; /* Adds checkmark */
+    margin-right: 8px; /* Spacing between checkmark and text */
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns content to the left */
+    gap: 20px; /* Space between the photo and text */
+}
+
+.profile-photo img {
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%; /* Makes the photo circular */
+    object-fit: cover;
+    border: 3px solid #00bcd4; /* Optional: Add border color */
+}
+
+
+/* Popup Modal Styles */
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Popup Background */
+.popup {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hidden state */
+.popup.hidden {
+    display: none;
+}
+
+/* Popup Content */
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    width: 320px;
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .popup-content {
+        background: #222;
+        color: #fff;
+    }
+}
+
+/* OK Button */
+.popup-content button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.popup-content button:hover {
+    background: #0056b3;
+}
+
+.popup.hidden {
+    display: none;
 }
